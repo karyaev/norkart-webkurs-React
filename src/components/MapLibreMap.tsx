@@ -54,6 +54,13 @@ export const MapLibreMap = () => {
         Høyde: {pointHoyde}
       </RPopup>
       )}
+      {address && (
+      <MapFlyTo
+         lngLat={
+         new LngLat(address.PayLoad.Posisjon.X, address.PayLoad.Posisjon.Y)
+         }
+      />
+      )}
     </RMap>
   );
 };
