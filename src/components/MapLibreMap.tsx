@@ -87,11 +87,9 @@ export const MapLibreMap = () => {
       }}
       onClick={onMapClick}
     >
-      <RMarker longitude={TRONDHEIM_COORDS[0]} latitude={TRONDHEIM_COORDS[1]} />
       {clickPoint && (
         <RMarker longitude={clickPoint.lng} latitude={clickPoint.lat} />
       )}
-      <RNavigationControl position="top-right" visualizePitch={true} />
       {bygningsOmriss &&
          <>
             <RSource id="bygning" type="geojson" data={bygningsOmriss} />
